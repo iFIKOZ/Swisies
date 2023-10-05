@@ -1,1 +1,1 @@
-<h1>Halaman Tambah Data</h1>
+<h1>Halaman Tambah Data Baru</h1>
