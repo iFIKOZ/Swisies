@@ -30,6 +30,8 @@ Route::get('/user', [UserController::class,'index'])->middleware('auth')->name('
 
 Route::get('/user/tambah', [UserController::class,'store'])->middleware('auth')->name('user.tambah');
 
+Route::get('/user/tambah', [UserController::class,'tambah'])->middleware('auth')->name('user.tambah');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

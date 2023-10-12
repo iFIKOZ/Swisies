@@ -16,5 +16,24 @@ class UserController extends Controller
     public function store() {
         return view('users.tambah');
     }
+
+    public function tambah(Request $request) {
+        
+        if($request->has('name')) {
+            $user = new User;
+
+            $user->name = $request->name;
+            $user->email = $request->email;
+            $user->password = $request->password;
+    
+            $user->save(); 
+
+            return redirect('/user');
+        }else {
+            return view('users.tambah');
+        }
+
+        
+    }
 }
 
